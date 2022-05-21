@@ -3,10 +3,13 @@ package com.axsvpn.android.activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText emailEdit;
     EditText passwordEdit;
     Button loginButton;
-
+    ProgressBar progressBar;
     private SharedPreferences sharedPreferences;
 
     @Override
@@ -44,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         emailEdit = findViewById(R.id.email_edit);
         passwordEdit = findViewById(R.id.password_edit);
         loginButton = findViewById(R.id.login_button);
+        progressBar = findViewById(R.id.progressBar);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,6 +204,11 @@ public class LoginActivity extends AppCompatActivity {
                         List<Server> servers = serverResponse.getData();
                         for (Server server: servers) {
                             if (server.getStatus() == 1) {
+                                if(server.getName().contains("WINDFLIX"))
+                                {
+                                    String[] names = server.getName().split(" ");
+                                    server.setName("ACCESS " + names[1]);
+                                }
                                 AppData.servers.add(server);
                             }
                         }
@@ -233,7 +242,21 @@ public class LoginActivity extends AppCompatActivity {
             emailEdit.setEnabled(false);
             passwordEdit.setEnabled(false);
             loginButton.setEnabled(false);
-            loginButton.setText("Logging In...");
+            //loginButton.setText("Logging In...");
+            progressBar.setVisibility(View.VISIBLE);
+            CountDownTimer timer = new CountDownTimer(30000, 1) {
+                @Override
+                public void onTick(long l) {
+                    loginButton.setText(DateUtils.formatElapsedTime(l / 1000));
+                }
+
+                @Override
+                public void onFinish() {
+
+                }
+            };
+            timer.start();
+
         } else {
             emailEdit.setEnabled(true);
             passwordEdit.setEnabled(true);
