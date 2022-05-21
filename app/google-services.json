@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "992076700144",
+    "firebase_url": "https://axsvpn-74cdd.firebaseio.com",
+    "project_id": "axsvpn-74cdd",
+    "storage_bucket": "axsvpn-74cdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992076700144:android:4b620227cf38e0230ca535",
+        "android_client_info": {
+          "package_name": "com.axsvpn.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992076700144-8n402nhcasv11be3qrrdhsst321skd17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxaYPpXGXHUg7wNnXQcj60ExjbtiqcbfY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992076700144-8n402nhcasv11be3qrrdhsst321skd17.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "992076700144-5p0t31p8rt5k8i38e6jmak6fj07riada.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.axsvpn.ios.app",
+                "app_store_id": "1533264762"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

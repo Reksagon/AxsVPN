@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AxsVPN</string>
+    <string name="email">Електронна пошта</string>
+    <string name="password">Пароль</string>
+    <string name="connection_log">Лог підключень</string>
+    <string name="send_log">Надіслати лог</string>
+    <string name="create_account">Створити обліковий запис</string>
+    <string name="first_name">Ім\'я</string>
+    <string name="last_name">Прізвище</string>
+    <string name="confirm_password">Підтвердіть пароль</string>
+    <string name="server_change_title">Попередження</string>
+    <string name="server_change_description">Ваш трафік не буде захищений при повторному підключенні</string>
+    <string name="server_change_continue">Продовжити</string>
+    <string name="searсh">Пошук</string>
+    <string name="open_log">Сервісний\nжурнал</string>
+    <string name="log_out">Вийти</string>
+    <string name="press">Натисніть, щоб отримати доступ</string>
+    <string name="disabled">ВІДКЛЮЧЕНО</string>
+    <string name="your_ip">Ваш IP</string>
+    <string name="go_unlimited">Безліміт</string>
+    <string name="left">ГБ залишилося</string>
+    <string name="server_location">Розташування сервера</string>
+    <string name="best_location">Найкраще розташування</string>
+    <string name="register">Зареєструватися</string>
+    <string name="connecting">ПІДКЛЮЧЕННЯ</string>
+    <string name="press_to_cancel">Натисніть, щоб скасувати з\'єднання</string>
+    <string name="connected">ПІДКЛЮЧЕНО</string>
+    <string name="press_to_disconnect">Натисніть, щоб вимкнути</string>
+    <string name="disconencting">ВІДКЛЮЧЕННЯ</string>
+    <string name="premium">Преміум — </string>
+    <string name="extend">Розширити</string>
+    <string name="free">Безкоштовно — </string>
+    <string name="upgrade">Оновити</string>
+    <string name="get_secured">Отримайте захищений доступ\nдо програм та веб-сайтів</string>
+    <string name="log_in">Вхід</string>
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" >
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.EditText">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorText</item>
+        <item name="backgroundTint">@color/edit_text_background_tint_selector</item>
+    </style>
+
+    <style name="AppTheme.CheckBox">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:buttonTint">@color/checkbox_button_tint_selector</item>
+    </style>
+
+    <style name="AppTheme.Button">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@drawable/button_background</item>
+    </style>
+
+    <style name="AppTheme.TextView">
+        <item name="android:textColor">@color/colorControl</item>
+    </style>
+</resources>

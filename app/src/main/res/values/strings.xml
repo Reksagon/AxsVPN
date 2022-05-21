@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">AxsVPN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="connection_log">Connection Log</string>
+    <string name="send_log">Send Log</string>
+    <string name="create_account">Create Account</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="server_change_title">Warning</string>
+    <string name="server_change_description">Your traffic will be unprotected during reconnection</string>
+    <string name="server_change_continue">Continue</string>
+    <string name="searсh">Search</string>
+    <string name="open_log">Service log</string>
+    <string name="log_out">Log out</string>
+    <string name="press">Press to get access</string>
+    <string name="disabled">DISABLED</string>
+    <string name="your_ip">Your IP</string>
+    <string name="go_unlimited">Go Unlimited</string>
+    <string name="left">GB Left</string>
+    <string name="server_location">Server location</string>
+    <string name="best_location">Best Location</string>
+    <string name="register">Register</string>
+    <string name="connecting">CONNECTING</string>
+    <string name="press_to_cancel">Press to cancel connecting</string>
+    <string name="connected">CONNECTED</string>
+    <string name="press_to_disconnect">Press to disconnect</string>
+    <string name="disconencting">DISCONNECTING</string>
+    <string name="premium">Premium - </string>
+    <string name="extend">Extend</string>
+    <string name="free">Free - </string>
+    <string name="upgrade">Upgrade</string>
+    <string name="get_secured">Get secured access\nto apps and websites</string>
+    <string name="log_in">Log In</string>
+</resources>

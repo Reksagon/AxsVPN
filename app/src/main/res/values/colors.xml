@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#031837</color>
+    <color name="colorAccent">#8A70D7</color>
+    <color name="colorText">#70A5D7</color>
+    <color name="colorControl">#9D9EA2</color>
+    <color name="colorDisconnected">#FF5E00</color>
+    <color name="colorConnecting">#8A70D7</color>
+    <color name="colorConnected">#70D7A2</color>
+    <color name="colorDisconnecting">#8A70D7</color>
+</resources>

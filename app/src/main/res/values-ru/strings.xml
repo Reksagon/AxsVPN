@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">AxsVPN</string>
+        <string name="email">Электронная почта</string>
+        <string name="password">Пароль</string>
+        <string name="connection_log">Лог подключений</string>
+        <string name="send_log">Отправить лог</string>
+        <string name="create_account">Создать аккаунт</string>
+        <string name="first_name">Имя</string>
+        <string name="last_name">Фамилия</string>
+        <string name="confirm_password">Подтвердите пароль</string>
+        <string name="server_change_title">Предупреждение</string>
+        <string name="server_change_description">Ваш трафик не будет защищен при повторном подключении</string>
+        <string name="server_change_continue">Продолжить</string>
+        <string name="searсh">Поиск</string>
+        <string name="open_log">Сервисный\nжурнал</string>
+        <string name="log_out">Выйти</string>
+        <string name="press">Нажмите, чтобы получить доступ</string>
+        <string name="disabled">ОТКЛЮЧЕНО</string>
+        <string name="your_ip">Ваш IP</string>
+        <string name="go_unlimited">Безлимит</string>
+        <string name="left">ГБ осталось</string>
+        <string name="server_location">Расположение сервера</string>
+        <string name="best_location">Лучшее местоположение</string>
+        <string name="register">Зарегистрироваться</string>
+        <string name="connecting">ПОДКЛЮЧЕНИЕ</string>
+        <string name="press_to_cancel">Нажмите, чтобы отменить соединение</string>
+        <string name="connected">ПОДКЛЮЧЕНО</string>
+        <string name="press_to_disconnect">Нажмите, чтобы отключиться</string>
+        <string name="disconencting">ОТКЛЮЧЕНИЕ</string>
+        <string name="premium">Премиум — </string>
+        <string name="extend">Расширить</string>
+        <string name="free">Бесплатно — </string>
+        <string name="upgrade">Обновить</string>
+        <string name="get_secured">Получите защищенный доступ\nк приложениям и веб-сайтам</string>
+        <string name="log_in">Вход</string>
+</resources>
