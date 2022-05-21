@@ -10,8 +10,8 @@ android {
         applicationId "com.axsvpn.android"
         minSdkVersion 21
         targetSdkVersion 32
-        versionCode 21
-        versionName '1.31'
+        versionCode 22
+        versionName '1.32'
         multiDexEnabled true
         testApplicationId "com.axsvpn.android.test"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
