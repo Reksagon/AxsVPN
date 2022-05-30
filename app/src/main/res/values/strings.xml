@@ -33,4 +33,12 @@
     <string name="upgrade">Upgrade</string>
     <string name="get_secured">Get secured access\nto apps and websites</string>
     <string name="log_in">Log In</string>
+    <string name="month_1">1 Month</string>
+    <string name="month_1_2">6 Months</string>
+    <string name="month_1_3">1 Year</string>
+    <string name="premium_txt">Unlimited VPN Traffic\nAccess All Server Locations\nMobile &amp; Desktop Apps\n24/7 Customer Support</string>
+    <string name="order">Order</string>
+    <string name="month">$3.99/mo</string>
+    <string name="month_6">$17.94/6mo</string>
+    <string name="year">$23.88/yr</string>
 </resources>

@@ -34,4 +34,12 @@
         <string name="upgrade">Обновить</string>
         <string name="get_secured">Получите защищенный доступ\nк приложениям и веб-сайтам</string>
         <string name="log_in">Вход</string>
+        <string name="month_1">1 Месяц</string>
+        <string name="month_1_2">6 Месяцев</string>
+        <string name="month_1_3">1 Год</string>
+        <string name="premium_txt">Неограниченный VPN-трафик\nДоступ ко всем серверам\nМобильные и Настольные приложения\n24/7 служба поддержки клиентов</string>
+        <string name="order">Заказать</string>
+        <string name="month">$3.99/м</string>
+        <string name="month_6">$17.94/6м</string>
+        <string name="year">$23.88/г</string>
 </resources>

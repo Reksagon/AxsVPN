@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     Button loginButton;
     ProgressBar progressBar;
     private SharedPreferences sharedPreferences;
+    CountDownTimer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -244,7 +245,7 @@ public class LoginActivity extends AppCompatActivity {
             loginButton.setEnabled(false);
             //loginButton.setText("Logging In...");
             progressBar.setVisibility(View.VISIBLE);
-            CountDownTimer timer = new CountDownTimer(30000, 1) {
+            timer = new CountDownTimer(30000, 1) {
                 @Override
                 public void onTick(long l) {
                     loginButton.setText(DateUtils.formatElapsedTime(l / 1000));
@@ -262,6 +263,8 @@ public class LoginActivity extends AppCompatActivity {
             passwordEdit.setEnabled(true);
             loginButton.setEnabled(true);
             loginButton.setText("Log In");
+            progressBar.setVisibility(View.GONE);
+            timer.cancel();
         }
     }
 

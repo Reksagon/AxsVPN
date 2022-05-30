@@ -20,10 +20,24 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
+
+import com.android.billingclient.api.BillingClient;
+import com.android.billingclient.api.BillingClientStateListener;
+import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.BillingResult;
+import com.android.billingclient.api.ProductDetails;
+import com.android.billingclient.api.ProductDetailsResponseListener;
+import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.PurchasesUpdatedListener;
+import com.android.billingclient.api.QueryProductDetailsParams;
+import com.android.billingclient.api.SkuDetails;
+import com.android.billingclient.api.SkuDetailsParams;
+import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.axsvpn.android.AppData;
 import com.axsvpn.android.R;
 import com.axsvpn.android.api.HttpApi;
@@ -31,11 +45,16 @@ import com.axsvpn.android.model.ConfigsResponse;
 import com.axsvpn.android.model.CredentialsResponse;
 import com.axsvpn.android.model.Server;
 import com.axsvpn.android.model.SessionResponse;
+import com.google.common.collect.ImmutableList;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -65,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
     TextView productText;
     TextView upgradeText;
 
+
     private SharedPreferences sharedPreferences;
 
     private IOpenVPNServiceInternal mService;
@@ -87,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
         setContentView(R.layout.activity_main);
 
         AppData.servers.get(0).setName(getResources().getString(R.string.best_location));
+
 
         connectButton = findViewById(R.id.connect_button);
         connectButton.setOnClickListener(new View.OnClickListener() {
@@ -121,7 +142,22 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
         upgradeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://axsvpn.com/clients/cart.php")));
+                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://axsvpn.com/clients/cart.php")));
+//                BillingFlowParams billingFlowParams =
+//                        BillingFlowParams.newBuilder()
+//                                .setProductDetailsParamsList(
+//                                        ImmutableList.of(
+//                                                BillingFlowParams.ProductDetailsParams.newBuilder()
+//                                                        // fetched via queryProductDetailsAsync
+//                                                        .setProductDetails(mSkuDetailsMap.get(mSkuId))
+//                                                        .setOfferToken(mSkuDetailsMap.get(mSkuId).getProductId())
+//                                                        .build()
+//                                        )
+//                                )
+//                                .build();
+//                billingClient.launchBillingFlow(MainActivity.this, billingFlowParams);
+                Intent intent = new Intent(MainActivity.this, PremiumActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -153,6 +189,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
         showProductLayout();
         refreshTrafficUI();
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

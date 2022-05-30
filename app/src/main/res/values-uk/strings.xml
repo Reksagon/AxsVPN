@@ -34,4 +34,12 @@
     <string name="upgrade">Оновити</string>
     <string name="get_secured">Отримайте захищений доступ\nдо програм та веб-сайтів</string>
     <string name="log_in">Вхід</string>
+    <string name="month_1">1 Місяць</string>
+    <string name="month_1_2">6 Місяців</string>
+    <string name="month_1_3">1 Рік</string>
+    <string name="premium_txt">Необмежений VPN-трафік\nДоступ до всіх серверів\nМобільні та Настільні програми\n24/7 служба підтримки клієнтів</string>
+    <string name="order">Замовити</string>
+    <string name="month">$3.99/м</string>
+    <string name="month_6">$17.94/6м</string>
+    <string name="year">$23.88/г</string>
 </resources>
