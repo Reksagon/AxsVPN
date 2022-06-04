@@ -12,8 +12,8 @@ android {
         applicationId "com.axsvpn.android"
         minSdkVersion 21
         targetSdkVersion 32
-        versionCode 25
-        versionName '1.34'
+        versionCode 28
+        versionName '1.35'
         multiDexEnabled true
         testApplicationId "com.axsvpn.android.test"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -70,9 +70,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.google.firebase:firebase-analytics:21.0.0'
-    implementation 'com.google.firebase:firebase-crashlytics:18.2.10'
-    implementation 'com.google.firebase:firebase-perf:20.0.6'
-    implementation 'com.google.firebase:firebase-messaging:23.0.4'
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.11'
+    implementation 'com.google.firebase:firebase-perf:20.1.0'
+    implementation 'com.google.firebase:firebase-messaging:23.0.5'
     implementation 'com.google.firebase:firebase-inappmessaging-display:20.1.2'
     implementation platform('com.google.firebase:firebase-bom:30.0.0')
     implementation 'com.github.bumptech.glide:glide:4.13.0'

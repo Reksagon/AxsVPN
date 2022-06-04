@@ -41,6 +41,7 @@ import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.axsvpn.android.AppData;
 import com.axsvpn.android.R;
 import com.axsvpn.android.api.HttpApi;
+import com.axsvpn.android.databinding.ActivityMainBinding;
 import com.axsvpn.android.model.ConfigsResponse;
 import com.axsvpn.android.model.CredentialsResponse;
 import com.axsvpn.android.model.Server;
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
     TextView serverText;
     TextView ipText;
     TextView productText;
-    TextView upgradeText;
+
 
 
     private SharedPreferences sharedPreferences;
@@ -101,10 +102,13 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
         }
     };
 
+
+    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         AppData.servers.get(0).setName(getResources().getString(R.string.best_location));
 
@@ -143,19 +147,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
             @Override
             public void onClick(View v) {
                 //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://axsvpn.com/clients/cart.php")));
-//                BillingFlowParams billingFlowParams =
-//                        BillingFlowParams.newBuilder()
-//                                .setProductDetailsParamsList(
-//                                        ImmutableList.of(
-//                                                BillingFlowParams.ProductDetailsParams.newBuilder()
-//                                                        // fetched via queryProductDetailsAsync
-//                                                        .setProductDetails(mSkuDetailsMap.get(mSkuId))
-//                                                        .setOfferToken(mSkuDetailsMap.get(mSkuId).getProductId())
-//                                                        .build()
-//                                        )
-//                                )
-//                                .build();
-//                billingClient.launchBillingFlow(MainActivity.this, billingFlowParams);
+
                 Intent intent = new Intent(MainActivity.this, PremiumActivity.class);
                 startActivity(intent);
             }
@@ -171,7 +163,6 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
         serverText = findViewById(R.id.server_text);
         ipText = findViewById(R.id.ip_text);
         productText = findViewById(R.id.product_text);
-        upgradeText = findViewById(R.id.upgrade_text);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -361,13 +352,13 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
     private void showProductLayout() {
         if (AppData.isPremium) {
             productText.setText(getResources().getString(R.string.premium) + AppData.productName);
-            upgradeText.setText(getResources().getString(R.string.extend));
+            binding.upgradeText.setText(getResources().getString(R.string.extend));
             connectButton.setEnabled(true);
         } else {
             double trafficLeft = (AppData.MAX_FREE_TRAFFIC - AppData.trafficUsed) / (1024 * 1024 * 1024f);
             productText.setText(getResources().getString(R.string.free) + new DecimalFormat("##.##").format(trafficLeft) +
                     getResources().getString(R.string.left));
-            upgradeText.setText(getResources().getString(R.string.upgrade));
+            binding.upgradeText.setText(getResources().getString(R.string.upgrade));
             if (AppData.trafficUsed >= AppData.MAX_FREE_TRAFFIC) {
                 connectButton.setEnabled(false);
                 if (OpenVPNService.mState.equals("NOPROCESS") == false || OpenVPNService.mState.equals("EXITING") == false) {
