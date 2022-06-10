@@ -146,8 +146,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.StateLi
         upgradeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://axsvpn.com/clients/cart.php")));
-
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://axsvpn.com/clients/cart.php")));
                 Intent intent = new Intent(MainActivity.this, PremiumActivity.class);
                 startActivity(intent);
             }
